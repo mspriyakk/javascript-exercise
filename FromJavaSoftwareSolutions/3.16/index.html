@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Core JS</title>
+</head>
+<body>
+	<!-- Write a program that reads an integer  and prints the sum of all even integers between 2 and the input value. inclusive. Print an error  message if the input value is less than 2. prompts accordingly.-->
+	<script>
+		"use strict";
+
+		let userNum  = prompt("Enter a whole number greater than  2");
+
+		if(userNum === null || userNum === "" ) {
+			document.write("cancelled");
+		}else if(userNum <= 2){
+			document.write("invalid data, your number is not great than 2");
+		}else{
+			let sum = 2;
+			while(userNum > 2){
+				if(userNum % 2  == 0){
+					sum += Number(userNum);
+				}
+				userNum--;
+			}
+			document.write("sum is " , sum)
+		}
+	</script>
+</body>
+</html>
